@@ -3,13 +3,13 @@ import Foto from "../componentes/Foto"
 import {Context} from "../Context"
 import {getClass} from "../ferramentas/classe"
 
-export default function Fotos() {
+export default function Fotos(props) {
     const {fotosObj} = useContext(Context)
 
     const FotosEl = fotosObj.map( (obj, i) => {
-                        return (
-                            <Foto key={obj.id} img={obj} className={getClass(i)}/>
-                        )
+                        return  obj.id !== props.id && 
+                        <Foto key={obj.id} img={obj} className={getClass(i)}/>
+                        
                     })
 
     return (

@@ -7,7 +7,7 @@ function ContextProvider(props) {
 
     useEffect( () => {
         fotosObj === undefined &&
-        fetch("https://raw.githubusercontent.com/bobziroll/scrimba-react-bootcamp-images/master/images.json")    
+        fetch("https://raw.githubusercontent.com/DaviDev01/scrimba-react-bootcamp-images/master/images.json")  
             .then(resp => resp.json())
             .then(data => setFotosObj(data))
             
@@ -21,7 +21,6 @@ function ContextProvider(props) {
         localStorage.setItem("carArr", JSON.stringify(carArr)) 
  }, [carArr] )
 
-    console.log('n')
 
     function favoritar(id) {
         setFotosObj( prev => prev.map(obj => obj.id === id ? {...obj, isFavorite: !obj.isFavorite} : obj))

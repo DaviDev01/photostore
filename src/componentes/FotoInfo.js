@@ -9,16 +9,14 @@ function FotoInfo() {
     const {img} = Location.state
     const noCar = carArr.some( obj => obj.id === img.id)
 
-
     return (
         <div>
             <div className="FotoInfo">
                 <img src={img.url} alt="" className="FotoInfo--img"/>
                 <div className="info--sec-cont">
                     <div className="info--sec">
-                        <p>Autor: Jeff Cheff</p>
-                        <p>Tamanho: 1000px / 900px</p>
-                        <p>Publicado em 20/12/2021</p>
+                        <p>Autor: {img.author}</p>
+                        <p>Publicado em {img.postDate}</p>
                     </div>
                     <i 
                         className={`fas fa-${ noCar ? 'shopping-cart small' : 'cart-plus'} FotoInfo--car`}
@@ -27,7 +25,7 @@ function FotoInfo() {
                 </div>
             </div>
             <section id="fotos">
-                <Fotos />
+                <Fotos id={img.id}/>
             </section>
         </div>
     )
