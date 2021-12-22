@@ -1,7 +1,8 @@
-import React, {useState, useContext} from "react"
+import React, {useContext} from "react"
 import {Context} from "../Context"
 import PropTypes from "prop-types"
 import useHover from "../hooks/useHover"
+import {Link} from "react-router-dom"
 
 
 function Foto({img, className}) {
@@ -26,7 +27,9 @@ function Foto({img, className}) {
                 onClick={() => {AdicionarAoCar(img, noCar)}}
            ></i>}    
            
-            <img className="Foto--cont__img" src={img.url} alt=""/>
+            <Link to="/foto_info" state={{img: img}}>
+                <img className="Foto--cont__img" src={img.url} alt="" onClick={() => window.scrollTo(0, 90)}/>
+            </Link>
         </div>    
     )
 }
