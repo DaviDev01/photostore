@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/photostore/static/css/main.f620f64a.css",
+    "main.js": "/photostore/static/js/main.a81e00c9.js",
+    "index.html": "/photostore/index.html",
+    "main.f620f64a.css.map": "/photostore/static/css/main.f620f64a.css.map",
+    "main.a81e00c9.js.map": "/photostore/static/js/main.a81e00c9.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f620f64a.css",
+    "static/js/main.a81e00c9.js"
+  ]
+}
