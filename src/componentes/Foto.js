@@ -8,7 +8,6 @@ import {Link} from "react-router-dom"
 function Foto({img, className}) {
     const {favoritar, AdicionarAoCar, carArr} = useContext(Context)
     const [hovered, hoverRef] = useHover()
-
     const noCar = carArr.some( obj => obj.id === img.id)
     
     return (
