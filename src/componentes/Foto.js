@@ -28,7 +28,7 @@ function Foto({img, className}) {
            ></i>}    
            
             <Link to="/foto_info" state={{img: img}}>
-                <img className="Foto--cont__img" src={img.url} alt="" onClick={() => window.scrollTo(0, 90)}/>
+                <img className="Foto--cont__img" src={img.url} alt="" onClick={() => window.scrollTo(0, 114.5)} />
             </Link>
         </div>    
     )
