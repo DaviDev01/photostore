@@ -20,7 +20,7 @@ img {
     justify-content: space-between;
     align-items: center;
     margin: 0;
-    padding: 1em 5em;    
+    padding: 1em 1em;  /*de 5em para 1em, mudar em mquery*/  
     border-bottom: #707070 solid .1px;
 }
 
@@ -46,13 +46,13 @@ a {text-decoration: none;}
 }
 
 .Fotos {
-    padding: 10px;
+    padding: 0px; /*de 10px para 0px, mudar em mQuery*/
     display: grid;
     grid-gap: .8em;
     grid-auto-rows: 100px;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); /*de 200px para 100px, mudar*/
     grid-auto-flow: dense;
-    width: 70%;
+    width: 90%; /*de 70% para 90%*/
     margin-top: 3em;
     margin-left: auto;
     margin-right: auto;
@@ -117,9 +117,9 @@ a {text-decoration: none;}
     flex-direction: row;
     align-items: center;
     height: 100px;
-    padding: 0 2em;
+    padding: 0 .8em;
     column-gap: 1em;
-    width: 60%;
+    width: 100%; /*mudei de 60% para 100%*/ 
 }
 
 .carrItem-Cont__img {
@@ -144,18 +144,34 @@ a {text-decoration: none;}
     transform: scale(1.03);
 }
 
+span {
+    color: rgba(0, 0, 0, 0.856);
+    font-weight: 600;
+}
+
 .FotoInfo {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     padding: 3em 0;
-    width: fit-content;
+    width: 95%; /*de 'fit-content' para 95%*/
     margin: 0 auto;
 }
 
 .FotoInfo--img {
     display: block;
-    height: 90vh;
+    width: 100%; /*mudei de height: 90vh */
+}
+
+.FotoInfo--car {
+    font-size: 1.3rem; /*mudei de 2rem para 1.3rem*/
+    transition: all 100ms;
+    cursor: pointer;
+    opacity: .9;/*adicionei*/
+}
+
+.FotoInfo--car:hover {
+    transform: scale(1.1);
 }
 
 .info-sec {
@@ -177,12 +193,70 @@ a {text-decoration: none;}
     padding: 0 1em 0 0;
 }
 
-.FotoInfo--car {
-    font-size: 2em;
-    transition: all 100ms;
-    cursor: pointer;
+@media (min-width: 550px) {
+
+    .Fotos {
+        padding: 10px; /*de 10px para 0px, mudar em mQuery*/
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /*de 200px para 100px, mudar*/
+        width: 90%;
+
+    }  
+    
+    .FotoInfo {
+        width: 90%; /*de 'fit-content' para 95%*/
+    }
+
+
+    .FotoInfo--img {
+        width: 100%; 
+        height: 100%;
+    }
+
 }
 
-.FotoInfo--car:hover {
-    transform: scale(1.1);
+@media (min-width: 600px) {
+   
+    .FotoInfo {
+        width: 90%; 
+    }
+
+    .FotoInfo {
+        width:fit-content; 
+        max-width: 90%;
+    }
+
+    .FotoInfo--img {
+        width: 100%; 
+        height: 100vh;
+        object-fit: cover;
+    }
+
+    .info--sec-cont {
+        width: 100%;
+        padding: 0 1em 0 0;
+    }    
+
 }
+
+@media (min-width: 700px) {
+    .nav {
+        padding: 1em 5em; 
+    }
+
+    .carrItem-Cont {
+        padding: 1em 5em; 
+    }
+}
+
+@media (min-width: 1000px) {
+    .Fotos {
+        width: 80%;
+    }
+
+    .carrItem-Cont {
+        padding: initial; 
+        width: 70%;
+    }
+}
+   
+    

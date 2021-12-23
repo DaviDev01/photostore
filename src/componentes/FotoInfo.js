@@ -15,8 +15,8 @@ function FotoInfo() {
                 <img src={img.url} alt="" className="FotoInfo--img"/>
                 <div className="info--sec-cont">
                     <div className="info--sec">
-                        <p>Autor: {img.author}</p>
-                        <p>Publicado em {img.postDate}</p>
+                        <p><span>Autor:</span> {img.author}</p>
+                        <p><span>Publicado em:</span> {img.postDate}</p>
                     </div>
                     <i 
                         className={`fas fa-${ noCar ? 'shopping-cart small' : 'cart-plus'} FotoInfo--car`}
@@ -24,7 +24,7 @@ function FotoInfo() {
                     ></i>
                 </div>
             </div>
-            <section id="fotos">
+            <section>
                 <Fotos id={img.id}/>
             </section>
         </div>
