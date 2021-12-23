@@ -6,7 +6,7 @@ function ContextProvider(props) {
     const [carArr, setCarArr] = useState(JSON.parse(localStorage.getItem("carArr")) || [])
 
     useEffect( () => {
-        !fotosObj.length > 0 &&
+        fotosObj.length === 0 &&
         fetch("https://raw.githubusercontent.com/DaviDev01/scrimba-react-bootcamp-images/master/images.json")  
             .then(resp => resp.json())
             .then(data => setFotosObj(data))
