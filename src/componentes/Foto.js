@@ -26,7 +26,7 @@ function Foto({img, className}) {
                 onClick={() => {AdicionarAoCar(img, noCar)}}
            ></i>}    
            
-            <Link to="/foto_info" state={{img: img}}>
+            <Link to="/photostore/fotoinfo" state={{img: img}}>
                 <img className="Foto--cont__img" src={img.url} alt="" onClick={() => window.scrollTo(0, 114.5)} />
             </Link>
         </div>    
