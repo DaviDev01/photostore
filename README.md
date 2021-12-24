@@ -1,4 +1,5 @@
 PT:
+
 ##PhotoStore
 
 Esse é um modelo de website que eu construí para exercitar alguns conceitos avançados de React como: 
@@ -9,9 +10,11 @@ Esse é um modelo de website que eu construí para exercitar alguns conceitos av
 e muito mais
 
 Link para o site no GitHub Pages: https://davidev01.github.io/photostore/
+
 ===============================================================================
 
-EN: 
+EN:
+
 ##PhotoStore
 
 This is a website mockup I built to exercise some advanced React concepts like:
