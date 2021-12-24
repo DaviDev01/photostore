@@ -16,7 +16,7 @@ function CarrItem({img}) {
                 className={`${hovered ? 'fas' : 'far'} fa-trash-alt`}
                 ref={hoverRef}  
             ></i>
-            <Link to="/photostore/fotoinfo" state={{img: img}}>
+            <Link to="/fotoinfo" state={{img: img}}>
                 <img src={img.url} alt="" className="carrItem-Cont__img" onClick={() => window.scrollTo(0, 90)}/>
             </Link>
             <h3 className="carrItem-Cont__valor">{price.toLocaleString("pt-bt", {style: "currency", currency: "BRL"})}</h3>

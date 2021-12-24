@@ -10,9 +10,9 @@ export default function App() {
         <div>
             <Header/>
             <Routes>
-                <Route exact path="/photostore" element={<Fotos />}/>
-                <Route path="/photostore/carrinho" element={<Carrinho />}/>
-                <Route path="/photostore/fotoinfo" element={<FotoInfo />}/>
+                <Route exact path="/" element={<Fotos />}/>
+                <Route path="/carrinho" element={<Carrinho />}/>
+                <Route path="/fotoinfo" element={<FotoInfo />}/>
             </Routes>
         </div>
     )

@@ -2,13 +2,13 @@ import React from "react"
 import ReactDOM from "react-dom"
 import App from "./App"
 import './index.css'
-import {BrowserRouter} from "react-router-dom"
+import {HashRouter} from "react-router-dom"
 import {ContextProvider} from "./Context"
 
 ReactDOM.render(
     <ContextProvider>
-        <BrowserRouter>
+        <HashRouter>
             <App />
-        </BrowserRouter> 
+        </HashRouter> 
     </ContextProvider>,
 document.getElementById("root"))
